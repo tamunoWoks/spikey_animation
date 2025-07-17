@@ -13,3 +13,7 @@ try:
         for i in range(7, 1, -1):
             print('-' * (i * i))   # Print a line with i² dashes
             time.sleep(0.1)        # Wait 0.1 seconds again
+
+# Gracefully exit the program when the user presses Ctrl+C
+except KeyboardInterrupt:
+    sys.exit()
