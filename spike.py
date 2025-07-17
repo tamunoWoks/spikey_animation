@@ -8,3 +8,8 @@ try:
         for i in range(1, 9):
             print('-' * (i * i))   # Print a line with i² dashes
             time.sleep(0.1)        # Wait 0.1 seconds to control animation speed
+
+        # Draw lines with decreasing length (from 7^2 to 2^2 dashes)
+        for i in range(7, 1, -1):
+            print('-' * (i * i))   # Print a line with i² dashes
+            time.sleep(0.1)        # Wait 0.1 seconds again
