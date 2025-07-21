@@ -2,6 +2,11 @@
 import time  # For adding delays between prints
 import sys   # For exiting the program cleanly
 
+# Introduce constants
+DELAY = 0.1         # Time delay between each frame (in seconds)
+CHAR = '-'          # Character to use for drawing
+MAX_INDEX = 8       # Maximum index (will square this value for line length)
+
 try:
     while True:  # The main program loop runs indefinitely
         # Draw lines with increasing length (from 1^2 to 8^2 dashes)
