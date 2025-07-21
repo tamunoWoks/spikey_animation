@@ -8,16 +8,16 @@ CHAR = '-'          # Character to use for drawing
 MAX_INDEX = 8       # Maximum index (will square this value for line length)
 
 try:
-    while True:  # The main program loop runs indefinitely
-        # Draw lines with increasing length (from 1^2 to 8^2 dashes)
-        for i in range(1, 9):
-            print('-' * (i * i))   # Print a line with i² dashes
-            time.sleep(0.1)        # Wait 0.1 seconds to control animation speed
+    while True:
+        # Draw lines with increasing length (1^2 to MAX_INDEX^2)
+        for i in range(1, MAX_INDEX + 1):
+            print(CHAR * (i * i))  # Print line with i² characters
+            time.sleep(DELAY)
 
-        # Draw lines with decreasing length (from 7^2 to 2^2 dashes)
-        for i in range(7, 1, -1):
-            print('-' * (i * i))   # Print a line with i² dashes
-            time.sleep(0.1)        # Wait 0.1 seconds again
+        # Draw lines with decreasing length ((MAX_INDEX - 1)^2 to 2^2)
+        for i in range(MAX_INDEX - 1, 1, -1):
+            print(CHAR * (i * i))  # Print line with i² characters
+            time.sleep(DELAY)
 
 # Gracefully exit the program when the user presses Ctrl+C
 except KeyboardInterrupt:
